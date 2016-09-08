@@ -4,12 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApiWithDelegatingHandlerExample.Common;
 
 namespace WebApiWithDelegatingHandlerExample.Controllers
 {
     
     public class ValuesController : ApiController
     {
+        [CustomTraceFilter]
         // GET api/values
         public IEnumerable<string> Get()
         {
